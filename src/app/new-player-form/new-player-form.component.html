@@ -1,0 +1,22 @@
+<div>
+  <p>
+    <label for="player-name">What's your name?</label>
+    <input
+      type="text"
+      name="player-name"
+      id="player-name"
+      [formControl]="playerNameControl"
+    />
+
+    <label for="hero-type">What's your type</label>
+    <select
+      name="hero-type"
+      id="hero-type"
+      [formControl]="playerTypeControl"
+    >
+      <option *ngFor="let type of types" value="{{type}}">{{type}}</option>
+    </select>
+
+    <button name="hero-generate" id="hero-generate" (click)="generatePlayer()">Create your player</button>
+  </p>
+</div>
