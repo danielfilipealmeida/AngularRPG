@@ -5,7 +5,8 @@ import {GameComponent} from "./game/game.component";
 
 const routes: Routes = [
   { path: 'new', component: NewPlayerFormComponent },
-  { path: 'game', component: GameComponent }
+  { path: 'game', component: GameComponent },
+  { path: 'quit', component: GameComponent, data: { action: 'quit'}}
 ];
 
 @NgModule({

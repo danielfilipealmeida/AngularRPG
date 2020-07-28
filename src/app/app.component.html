@@ -1,10 +1,11 @@
-<div class="content" role="main">
+<div class="container-fluid content" role="main">
   <h1>{{ title }}</h1>
 
   <nav *ngIf="router.url == '/'">
     <ul>
       <li><a routerLink="/new">New Game</a></li>
-      <li><a routerLink="/game">Continue Game</a></li>
+      <li *ngIf="gameService.gameRunning"><a routerLink="/game">Continue Game</a></li>
+      <li *ngIf="gameService.gameRunning"><a routerLink="/quit">Quit Game</a></li>
     </ul>
 
   </nav>

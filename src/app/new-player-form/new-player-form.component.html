@@ -1,22 +1,31 @@
 <div>
-  <p>
-    <label for="player-name">What's your name?</label>
-    <input
-      type="text"
-      name="player-name"
-      id="player-name"
-      [formControl]="playerNameControl"
-    />
+    <div class="form-group">
+      <label for="player-name">What's your name?</label>
+      <input
+        type="text"
+        class="form-control"
+        name="player-name"
+        id="player-name"
+        [formControl]="playerNameControl"
+      />
+    </div>
 
-    <label for="hero-type">What's your type</label>
-    <select
-      name="hero-type"
-      id="hero-type"
-      [formControl]="playerTypeControl"
-    >
-      <option *ngFor="let type of types" value="{{type}}">{{type}}</option>
-    </select>
+    <div class="form-group">
+      <label for="hero-type">What's your type</label>
+      <select
+        class="form-control"
+        name="hero-type"
+        id="hero-type"
+        [formControl]="playerTypeControl"
+      >
+        <option *ngFor="let type of types" value="{{type}}">{{type}}</option>
+      </select>
+    </div>
 
-    <button name="hero-generate" id="hero-generate" (click)="generatePlayer()">Create your player</button>
-  </p>
+    <button
+      class="btn btn-primary"
+      name="hero-generate"
+      id="hero-generate"
+      (click)="generatePlayer()"
+    >Create your player</button>
 </div>
