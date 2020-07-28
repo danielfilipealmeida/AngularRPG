@@ -30,7 +30,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    console.log(compiled)
     expect(compiled.querySelector('.content h1').textContent).toContain('RPG game');
   });
 });

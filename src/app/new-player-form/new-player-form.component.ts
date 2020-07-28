@@ -15,7 +15,11 @@ export class NewPlayerFormComponent implements OnInit {
   playerNameControl = new FormControl('');
   playerTypeControl = new FormControl('')
 
-  constructor(private playerService: PlayerService, private gameService: GameService, private routerService: Router ) { }
+  constructor(
+    private playerService: PlayerService,
+    private gameService: GameService,
+    private routerService: Router
+  ) { }
 
   ngOnInit(): void {
     this.types = this.playerService.playerTypes

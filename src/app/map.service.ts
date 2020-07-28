@@ -11,23 +11,30 @@ enum GameMapCellType {
   Water
 }
 
-export interface GameMapCell {
+export interface GameMapCellInterface {
   type: GameMapCellType,
+}
 
+export class GameMapCell {
+  type: GameMapCellType;
+
+  constructor(type:GameMapCellType) {
+  }
 }
 
 export class GameMap {
   width: number;
   height: number;
-  map:[GameMapCell]
+  map:GameMapCell[]
 
   constructor(width: number, height: number) {
     this.width = width;
     this.height = height;
+    this.map = Array();
 
     for (let f=0; f < width * height; f++) {
-      let newCell:GameMapCell;
-      newCell.type = GameMapCellType.Void;
+      let newCell:GameMapCellInterface = new GameMapCell(GameMapCellType.Void);
+
       this.map.push(newCell);
     }
   }

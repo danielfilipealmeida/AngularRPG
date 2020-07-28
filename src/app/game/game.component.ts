@@ -18,9 +18,9 @@ export class GameComponent implements OnInit {
   constructor(
     private playerService: PlayerService,
     private gameService: GameService,
+    private mapService: MapService,
     private router:Router,
-    private route:ActivatedRoute,
-    private mapService: MapService
+    private route:ActivatedRoute
   ) {
 
     this.route.data.subscribe(data => {
